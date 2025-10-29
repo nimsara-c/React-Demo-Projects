@@ -13,6 +13,10 @@ export default function Tenzies(props) {
     }
   }, []);
 
+  useEffect(() => {
+    if (isWon()) console.log("You Won!");
+  }, [diceInfoList]);
+
   function isWon() {
     let isWon = true;
     diceInfoList.forEach((die) =>
@@ -36,13 +40,6 @@ export default function Tenzies(props) {
   }
 
   function calculateState(dieVal) {
-    console.log(
-      "CalculateState() => choosenVal: " +
-        choosenVal.current +
-        "\tdieVal: " +
-        dieVal
-    );
-
     if (choosenVal.current !== null && choosenVal.current === dieVal) {
       return 1;
     } else if (choosenVal.current !== null && choosenVal.current !== dieVal) {
@@ -69,11 +66,7 @@ export default function Tenzies(props) {
       return updatedDiceInfo;
     });
 
-    setTimeout(() => {
-      if (isWon()) console.log("You Won!!");
-    }, 300);
-
-    console.log("Updated choosenVal: " + choosenVal.current);
+    //console.log("Updated choosenVal: " + choosenVal.current);
     //diceInfoList[id].state = 1;
   }
 
@@ -99,6 +92,6 @@ function generateRandomVals(count = 10) {
   for (let i = 0; i < count; i++) {
     numList.push(Math.ceil(Math.random() * 9));
   }
-  console.log(numList);
+  //console.log(numList);
   return numList;
 }

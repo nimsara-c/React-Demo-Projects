@@ -1,5 +1,5 @@
 export default function Die(props) {
-  console.log("Die rendered!");
+  //console.log("Die rendered!");
   return (
     <button
       id={props.info.id}
