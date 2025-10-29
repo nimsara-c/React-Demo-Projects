@@ -4,7 +4,9 @@
   justify-self: center;
   align-self: center;
 
-  height: 100%;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .tenzies-page > * {
@@ -12,7 +14,6 @@
 }
 
 .tenzies-page > h1 {
-  background-color: rgb(255, 255, 255);
   height: 60px;
   justify-self: center;
   align-content: center;
@@ -27,6 +28,28 @@
 
   margin: 20px 0px;
   padding: 20px;
+}
+
+.tenzies-restart-btn-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.tenzies-restart-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgb(46, 46, 255);
+  color: white;
+}
+
+.tenzies-restart-btn:hover {
+  cursor: pointer;
+  background-color: rgb(94, 94, 245);
 }
 
 .tenzies-die {
@@ -47,14 +70,15 @@
   box-shadow: 3px 3px 2px rgb(190, 203, 203);
 }
 
+.tenzies-die.correct {
+  background-color: rgb(144, 240, 174);
+}
+
+.tenzies-die.false {
+  background-color: rgb(240, 149, 144);
+}
+
 .tenzies-die:hover {
   cursor: pointer;
   background-color: azure;
-}
-
-.tenzies-die:focus {
-  border-style: groove;
-  border-color: rgb(175, 219, 219);
-  border-width: 3px;
-  background-color: rgb(170, 241, 241);
 }
